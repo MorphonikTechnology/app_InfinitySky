@@ -199,7 +199,7 @@ class _CursosState extends State<Cursos> {
       ),
       body: const Center(
         child: Text(
-          '',
+          '-',
           style: TextStyle(fontSize: 20),
         ),
       ),
