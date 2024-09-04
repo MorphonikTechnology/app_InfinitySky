@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        // Define a cor principal do tema como azul.
         primarySwatch: Colors.blue,
+        // Ajusta a densidade visual do tema para diferentes plataformas.
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: const TextTheme(
           bodyMedium: TextStyle(color: Colors.black, fontSize: 18),
@@ -173,6 +175,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                   ),
                 ),
               ),
+              // Itens do Menu (telas)
               ListTile(
                 leading: const Icon(Icons.public, color: Color(0xFF0F79BA)),
                 title: const Text(
@@ -210,19 +213,27 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Foi usado um carrossel para exibir as imagens
             Padding(
               padding: const EdgeInsets.only(top: 0),
               child: CarouselSlider(
                 options: CarouselOptions(
                   height: 200.0,
+                  // Reproduz as imagens automaticamente
                   autoPlay: true,
+                  // Enfatiza a imagem central
                   enlargeCenterPage: true,
+                  // Proporção da imagem
                   aspectRatio: 16 / 9,
+                  // Animação de reprodução automática
                   autoPlayCurve: Curves.fastOutSlowIn,
+                  // Permite rotação infinita
                   enableInfiniteScroll: true,
+                  // Duração da animação de troca
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   viewportFraction: 0.8,
                 ),
+                // Usada para criar uma lista pra o carrossel
                 items: imageList.map((item) => Stack(
                   children: [
                     Center(
@@ -233,12 +244,14 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                               color: Colors.black.withOpacity(0.5),
                               spreadRadius: 5,
                               blurRadius: 7,
+                              // Sombra da imagem
                               offset: const Offset(0, 3), // changes position of shadow
                             ),
                           ],
                         ),
                         child: Image.asset(
                           item,
+                          // Ajusta a imagem para cobrir, neste caso, o container
                           fit: BoxFit.cover,
                           width: 1000,
                         ),
@@ -274,19 +287,21 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                       ),
                     ),
                   ],
+                // Mapeia a lista de imagens para widgets de carrossel
                 )).toList(),
               ),
             ),
+            // Quadros com imagens e texto
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/canada.jpg', // Substitua pelo caminho da imagem correta
+                      'assets/canada.jpg',
                       fit: BoxFit.cover,
                       width: 370,
-                      height: 150, // Defina a altura do card
+                      height: 150,
                     ),
                     Positioned(
                       bottom: 0,
@@ -315,10 +330,10 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/australia.jpg', // Substitua pelo caminho da imagem correta
+                      'assets/australia.jpg',
                       fit: BoxFit.cover,
                       width: 370,
-                      height: 150, // Defina a altura do card
+                      height: 150,
                     ),
                     Positioned(
                       bottom: 0,
@@ -347,10 +362,10 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/argentina.jpg', // Substitua pelo caminho da imagem correta
+                      'assets/argentina.jpg',
                       fit: BoxFit.cover,
                       width: 370,
-                      height: 150, // Defina a altura do card
+                      height: 150,
                     ),
                     Positioned(
                       bottom: 0,
@@ -379,10 +394,10 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/holanda.jpg', // Substitua pelo caminho da imagem correta
+                      'assets/holanda.jpg',
                       fit: BoxFit.cover,
                       width: 370,
-                      height: 150, // Defina a altura do card
+                      height: 150,
                     ),
                     Positioned(
                       bottom: 0,
@@ -411,10 +426,10 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/africa_sul.jpg', // Substitua pelo caminho da imagem correta
+                      'assets/africa_sul.jpg',
                       fit: BoxFit.cover,
                       width: 370,
-                      height: 150, // Defina a altura do card
+                      height: 150,
                     ),
                     Positioned(
                       bottom: 0,
@@ -443,10 +458,10 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/reino_unido.jpg', // Substitua pelo caminho da imagem correta
+                      'assets/reino_unido.jpg',
                       fit: BoxFit.cover,
                       width: 370,
-                      height: 150, // Defina a altura do card
+                      height: 150,
                     ),
                     Positioned(
                       bottom: 0,

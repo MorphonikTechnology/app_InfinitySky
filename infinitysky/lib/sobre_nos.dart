@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Configura o MaterialApp com a rota inicial '/Sobre nós' e define as rotas para diferentes telas da aplicação.
     return MaterialApp(
       initialRoute: '/Sobre nós',
       routes: {
@@ -42,9 +43,10 @@ class _SobreNosState extends State<SobreNos> {
     });
 
     String routeName;
-
+    // Usa um switch para definir a rota com base no índice fornecido
     switch (index) {
       case 0:
+        // Define a rota para a tela 
         routeName = '/Melhores Destinos';
         break;
       case 1:
@@ -68,11 +70,14 @@ class _SobreNosState extends State<SobreNos> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        elevation: 0,
+        // Remove a sombra da AppBar.
+        elevation: 0, 
         title: Row(
+          // Distribui os widgets filhos como padrão ao longo da linha.
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Padding(
+              // Adiciona um preenchimento à esquerda do texto.
               padding: EdgeInsets.only(left: 16.0),
               child: Text.rich(
                 TextSpan(
@@ -93,6 +98,7 @@ class _SobreNosState extends State<SobreNos> {
             Align(
               alignment: Alignment.bottomRight,
               child: Padding(
+                // Adiciona um preenchimento à direita da imagem.
                 padding: const EdgeInsets.only(right: 12.0),
                 child: Image.asset(
                   'assets/icone_voando.png',
@@ -111,11 +117,12 @@ class _SobreNosState extends State<SobreNos> {
             color: Colors.white,
             child: const Column(
               children: [
-                // Primeiro Card
+                // Primeiro Quadro: Motivos para embarcar com a InfinitySky
                 Card(
                   color: Colors.white,
                   elevation: 4,
                   shape: RoundedRectangleBorder(
+                    // Define bordas retas para o Card.
                     borderRadius: BorderRadius.zero,
                   ),
                   child: Padding(
@@ -126,6 +133,7 @@ class _SobreNosState extends State<SobreNos> {
                           child: Text(
                             'MOTIVOS PARA\nEMBARCAR NESSA\nCOM A INFINITYSKY',
                             style: TextStyle(
+                              // Define o texto como negrito.
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                             ),
@@ -133,6 +141,7 @@ class _SobreNosState extends State<SobreNos> {
                         ),
                         Expanded(
                           child: Column(
+                            // Alinha o texto à esquerda dentro da coluna.
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
@@ -163,7 +172,7 @@ class _SobreNosState extends State<SobreNos> {
                   ),
                 ),
                 SizedBox(height: 16),
-                // Segundo Card
+                // Segundo Quadro: Quem somos?
                 Card(
                   color: Color(0xFF003B5C),
                   elevation: 4,
@@ -184,6 +193,7 @@ class _SobreNosState extends State<SobreNos> {
                           ),
                           textAlign: TextAlign.center,
                         ),
+                        // Espaçamento vertical.
                         SizedBox(height: 10),
                         Center(
                           child: SizedBox(
@@ -194,6 +204,7 @@ class _SobreNosState extends State<SobreNos> {
                                 color: Colors.white,
                                 fontSize: 16,
                               ),
+                              // Alinha o texto de forma justificada.
                               textAlign: TextAlign.justify,
                             ),
                           ),
@@ -203,7 +214,7 @@ class _SobreNosState extends State<SobreNos> {
                   ),
                 ),
                 SizedBox(height: 16),
-                // Terceiro Card
+                // Terceiro Card: Contato
                 Card(
                   color: Colors.white,
                   elevation: 4,
@@ -243,30 +254,36 @@ class _SobreNosState extends State<SobreNos> {
                   ),
                 ),
                 SizedBox(height: 16),
-                // Imagens das Redes Sociais
+                // Ícones das redes sociais com os links.
                 SizedBox(
                   height: 70,
                   child: SingleChildScrollView(
+                    // Permite rolar horizontalmente.
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SocialMediaIcon(
+                          // Caminho para o ícone da rede social.
+                          // Instagram
                           iconPath: 'assets/icone_insta.png',
                           url: 'https://www.instagram.com/yourprofile',
                         ),
                         SizedBox(width: 16),
                         SocialMediaIcon(
+                          // Whatsapp
                           iconPath: 'assets/icone_whats.png',
                           url: 'https://wa.me/5511912345678',
                         ),
                         SizedBox(width: 16),
                         SocialMediaIcon(
+                          // Linkedlin
                           iconPath: 'assets/icone_linkedlin.png',
                           url: 'https://www.linkedin.com/in/yourprofile',
                         ),
                         SizedBox(width: 16),
                         SocialMediaIcon(
+                          // E-mail
                           iconPath: 'assets/icone_email.png',
                           url: 'mailto:example@example.com',
                         ),
@@ -279,9 +296,11 @@ class _SobreNosState extends State<SobreNos> {
           ),
         ),
       ),
+      // Desenvolvimento do BottomNavigationBar para locomover entre as telas
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           color: Color(0xFF003B5C),
+          // Bordas, onde pode ajudar o arredondadamento
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -293,11 +312,14 @@ class _SobreNosState extends State<SobreNos> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(
+              // Distribui os ícones igualmente.
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
                   icon: const Icon(Icons.home, size: 50),
+                  // Cor de cada icone irá ficar em cada tela
                   color: _selectedIndex == 0 ? Colors.white : Colors.grey,
+                  // Função chamada ao pressionar o botão.
                   onPressed: () => _onItemTapped(0),
                 ),
                 IconButton(
@@ -320,6 +342,7 @@ class _SobreNosState extends State<SobreNos> {
             Container(
               margin: const EdgeInsets.only(top: 0),
               height: 2,
+              // Largura da linha de separação.
               width: MediaQuery.of(context).size.width * 0.8,
               color: Colors.white,
             ),
@@ -340,8 +363,10 @@ class SocialMediaIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      // Chama _launchURL quando o ícone é tocado.
       onTap: () => _launchURL(url),
       child: Image.asset(
+        // Carrega a imagem do ícone a partir do caminho fornecido.
         iconPath,
         width: 40,
         height: 40,
@@ -349,10 +374,14 @@ class SocialMediaIcon extends StatelessWidget {
     );
   }
 
+  // Função para abrir a URL no navegador.
   void _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
+    // Verifica se a URL pode ser aberta
     if (await canLaunchUrl(uri)) {
+      // Abre a URL.
       await launchUrl(uri);
+      // Lança uma exceção se a URL não puder ser aberta.
     } else {
       throw 'Could not launch $url';
     }
