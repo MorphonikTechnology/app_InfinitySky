@@ -1,0 +1,52 @@
+name: infinitysky
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.0.20
+
+
+  carousel_slider: ^4.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.10.0
+  flutter_screenutil: ^5.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icone_app.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icone_email.png
+    - assets/icone_insta.png
+    - assets/icone_linkedlin.png
+    - assets/icone_whats.png
+    - assets/icone_voando.png
+    - assets/nova_york.png
+    - assets/londres.png
+    - assets/portugal.png
+    - assets/toronto.png
+    - assets/estude1.jpg
+    - assets/estude2.jpg
+    - assets/estude3.jpg
+    - assets/estude4.jpg
+    - assets/australia.jpg
+    - assets/canada.jpg
+    - assets/argentina.jpg
+    - assets/holanda.jpg
+    - assets/africa_sul.jpg
+    - assets/reino_unido.jpg
+    - assets/icone_app.png
+    - assets/logo_inicio.png
