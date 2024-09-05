@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Tela será um SplashScreen (tela intro), onde irá ter um gif que terá um determinado tempo para mostrar a logo da empresa.
+// Tela será um SplashScreen (tela intro), onde irá ter um GIF que terá um determinado tempo para mostrar a logo da empresa.
 class TelaIntro extends StatelessWidget {
   const TelaIntro({super.key});
 
@@ -14,6 +14,7 @@ class TelaIntro extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
+        // Imagem/GIF que será mostrada na tela
         child: Image.asset('assets/logo_inicio.png'),
       ),
     );

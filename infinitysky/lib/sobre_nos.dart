@@ -80,6 +80,7 @@ class _SobreNosState extends State<SobreNos> {
               // Adiciona um preenchimento à esquerda do texto.
               padding: EdgeInsets.only(left: 16.0),
               child: Text.rich(
+                // Título principal desta tela.
                 TextSpan(
                   children: [
                     TextSpan(

@@ -76,6 +76,7 @@ class _PacotesFavoritadosState extends State<PacotesFavoritados> {
             const Padding(
               padding: EdgeInsets.only(left: 16.0),
               child: Text.rich(
+                // Título principal desta tela.
                 TextSpan(
                   children: [
                     TextSpan(

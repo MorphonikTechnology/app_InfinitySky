@@ -98,6 +98,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
             const Padding(
               padding: EdgeInsets.only(left: 16.0),
               child: Text.rich(
+                // Título principal desta tela.
                 TextSpan(
                   children: [
                     TextSpan(
@@ -233,7 +234,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   viewportFraction: 0.8,
                 ),
-                // Usada para criar uma lista pra o carrossel
+                // Usada para criar uma lista para o carrossel
                 items: imageList.map((item) => Stack(
                   children: [
                     Center(
@@ -245,7 +246,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                               spreadRadius: 5,
                               blurRadius: 7,
                               // Sombra da imagem
-                              offset: const Offset(0, 3), // changes position of shadow
+                              offset: const Offset(0, 3),
                             ),
                           ],
                         ),

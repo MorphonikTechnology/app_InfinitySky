@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:infinitysky/escolas.dart';
 import 'package:infinitysky/melhores_destinos.dart';
 import 'package:infinitysky/pacotes_favoritados.dart';
@@ -75,6 +76,13 @@ class _CursosState extends State<Cursos> {
 
   @override
   Widget build(BuildContext context) {
+    const List<String> imageList = [
+      'assets/idioma1.jpg',
+      'assets/idioma2.jpg',
+      'assets/idioma3.jpg',
+      'assets/idioma4.jpg',
+    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -197,10 +205,173 @@ class _CursosState extends State<Cursos> {
           ),
         ),
       ),
-      body: const Center(
-        child: Text(
-          '-',
-          style: TextStyle(fontSize: 20),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 0),
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  height: 200.0,
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  aspectRatio: 16 / 9,
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enableInfiniteScroll: true,
+                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                  viewportFraction: 0.8,
+                ),
+                items: imageList.map((item) => Stack(
+                  children: [
+                    Center(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.5),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Image.asset(
+                          item,
+                          fit: BoxFit.cover,
+                          width: 1000,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                        color: Colors.black54,
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Cursos de idiomas',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 23,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Exclusivos para cada localidade!',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                )).toList(),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      'assets/ingles.jpg',
+                      fit: BoxFit.cover,
+                      width: 370,
+                      height: 150,
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(10.0),
+                        color: Colors.black45,
+                        child: const Text(
+                          'Inglês',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      'assets/espanhol.jpg',
+                      fit: BoxFit.cover,
+                      width: 370,
+                      height: 150,
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(10.0),
+                        color: Colors.black45,
+                        child: const Text(
+                          'Espanhol',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      'assets/holandes.jpg',
+                      fit: BoxFit.cover,
+                      width: 370,
+                      height: 150,
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(10.0),
+                        color: Colors.black45,
+                        child: const Text(
+                          'Holandês',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: Container(

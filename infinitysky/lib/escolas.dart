@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:infinitysky/cursos.dart';
 import 'package:infinitysky/melhores_destinos.dart';
 import 'package:infinitysky/pacotes_favoritados.dart';
@@ -167,7 +168,7 @@ class _EscolasState extends State<Escolas> {
                 leading: const Icon(Icons.public, color: Color(0xFF0F79BA)),
                 title: const Text(
                   'Países',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, '/Melhores Destinos');
@@ -177,7 +178,7 @@ class _EscolasState extends State<Escolas> {
                 leading: const Icon(Icons.school, color: Color(0xFF0F79BA)),
                 title: const Text(
                   'Cursos',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, '/cursos');
@@ -187,7 +188,7 @@ class _EscolasState extends State<Escolas> {
                 leading: const Icon(Icons.business, color: Color(0xFF0F79BA)),
                 title: const Text(
                   'Escolas',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, '/escolas');
@@ -197,10 +198,11 @@ class _EscolasState extends State<Escolas> {
           ),
         ),
       ),
-      body: const Center(
-        child: Text(
-          '',
-          style: TextStyle(fontSize: 20),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            ImageCarouselSlider(),
+          ],
         ),
       ),
       bottomNavigationBar: Container(
@@ -251,6 +253,220 @@ class _EscolasState extends State<Escolas> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ImageCarouselSlider extends StatelessWidget {
+  final List<String> imageList = const [
+    'assets/escola1.jpg',
+    'assets/escola2.jpg',
+    'assets/escola3.jpg',
+    'assets/escola4.jpeg',
+  ];
+
+  const ImageCarouselSlider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 0),
+          child: CarouselSlider(
+            options: CarouselOptions(
+              height: 200.0,
+              autoPlay: true,
+              enlargeCenterPage: true,
+              aspectRatio: 16 / 9,
+              autoPlayCurve: Curves.fastOutSlowIn,
+              enableInfiniteScroll: true,
+              autoPlayAnimationDuration: const Duration(milliseconds: 800),
+              viewportFraction: 0.8,
+            ),
+            items: imageList.map((item) => Stack(
+              children: [
+                Center(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Image.asset(
+                      item,
+                      fit: BoxFit.cover,
+                      width: 1000,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    color: Colors.black54,
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Conheça nossas escolas',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'A base do sucesso começa aqui!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )).toList(),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: Stack(
+              children: [
+                Image.asset(
+                  'assets/barton.jpg', // Substitua pelo caminho da imagem correta
+                  fit: BoxFit.cover,
+                  width: 370,
+                  height: 150, // Defina a altura do card
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+                    color: Colors.black45,
+                    child: const Text(
+                      'Barton International College',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: Stack(
+              children: [
+                Image.asset(
+                  'assets/expanish.jpg', // Substitua pelo caminho da imagem correta
+                  fit: BoxFit.cover,
+                  width: 370,
+                  height: 150, // Defina a altura do card
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+                    color: Colors.black45,
+                    child: const Text(
+                      'Expanish',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: Stack(
+              children: [
+                Image.asset(
+                  'assets/amsterdam.jpg', // Substitua pelo caminho da imagem correta
+                  fit: BoxFit.cover,
+                  width: 370,
+                  height: 150, // Defina a altura do card
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+                    color: Colors.black45,
+                    child: const Text(
+                      'University of Amsterdam',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: Stack(
+              children: [
+                Image.asset(
+                  'assets/british.jpeg', // Substitua pelo caminho da imagem correta
+                  fit: BoxFit.cover,
+                  width: 370,
+                  height: 150, // Defina a altura do card
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+                    color: Colors.black45,
+                    child: const Text(
+                      'British Study Centres',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
