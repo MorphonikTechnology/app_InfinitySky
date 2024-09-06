@@ -89,6 +89,7 @@ class _EscolasState extends State<Escolas> {
               child: Text.rich(
                 TextSpan(
                   children: [
+                    // Título principal desta tela.
                     TextSpan(
                       text: 'Escolas ',
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
@@ -294,7 +295,7 @@ class ImageCarouselSlider extends StatelessWidget {
                           color: Colors.black.withOpacity(0.5),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: const Offset(0, 3), // changes position of shadow
+                          offset: const Offset(0, 3),
                         ),
                       ],
                     ),
@@ -338,16 +339,17 @@ class ImageCarouselSlider extends StatelessWidget {
             )).toList(),
           ),
         ),
+        // Inicio das imagens das escolas e seus respectivos nomes
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
             child: Stack(
               children: [
                 Image.asset(
-                  'assets/barton.jpg', // Substitua pelo caminho da imagem correta
+                  'assets/barton.jpg',
                   fit: BoxFit.cover,
                   width: 370,
-                  height: 150, // Defina a altura do card
+                  height: 150,
                 ),
                 Positioned(
                   bottom: 0,
@@ -376,10 +378,10 @@ class ImageCarouselSlider extends StatelessWidget {
             child: Stack(
               children: [
                 Image.asset(
-                  'assets/expanish.jpg', // Substitua pelo caminho da imagem correta
+                  'assets/expanish.jpg',
                   fit: BoxFit.cover,
                   width: 370,
-                  height: 150, // Defina a altura do card
+                  height: 150,
                 ),
                 Positioned(
                   bottom: 0,
@@ -408,10 +410,10 @@ class ImageCarouselSlider extends StatelessWidget {
             child: Stack(
               children: [
                 Image.asset(
-                  'assets/amsterdam.jpg', // Substitua pelo caminho da imagem correta
+                  'assets/amsterdam.jpg',
                   fit: BoxFit.cover,
                   width: 370,
-                  height: 150, // Defina a altura do card
+                  height: 150,
                 ),
                 Positioned(
                   bottom: 0,
@@ -440,10 +442,10 @@ class ImageCarouselSlider extends StatelessWidget {
             child: Stack(
               children: [
                 Image.asset(
-                  'assets/british.jpeg', // Substitua pelo caminho da imagem correta
+                  'assets/british.jpeg',
                   fit: BoxFit.cover,
                   width: 370,
-                  height: 150, // Defina a altura do card
+                  height: 150,
                 ),
                 Positioned(
                   bottom: 0,

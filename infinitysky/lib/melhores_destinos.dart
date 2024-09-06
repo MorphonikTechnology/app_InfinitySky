@@ -292,7 +292,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 )).toList(),
               ),
             ),
-            // Quadros com imagens e texto
+            // Inicio das imagens e seus respectivos países
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(

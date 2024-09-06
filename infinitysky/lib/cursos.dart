@@ -96,6 +96,7 @@ class _CursosState extends State<Cursos> {
               child: Text.rich(
                 TextSpan(
                   children: [
+                    // Título principal desta tela.
                     TextSpan(
                       text: 'Melhores ',
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
@@ -275,6 +276,7 @@ class _CursosState extends State<Cursos> {
                 )).toList(),
               ),
             ),
+            // Inicio das imagens e seus respectivos cursos
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(

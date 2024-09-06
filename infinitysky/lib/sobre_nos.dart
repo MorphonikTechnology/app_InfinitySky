@@ -274,7 +274,7 @@ class _SobreNosState extends State<SobreNos> {
                         SocialMediaIcon(
                           // Whatsapp
                           iconPath: 'assets/icone_whats.png',
-                          url: 'https://wa.me/5511912345678',
+                          url: 'https://api.whatsapp.com/send?phone=5511930491398&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.%20Poderiam%20me%20fornecer%20mais%20detalhes,%20por%20favor?%20Obrigado!',
                         ),
                         SizedBox(width: 16),
                         SocialMediaIcon(
@@ -286,7 +286,7 @@ class _SobreNosState extends State<SobreNos> {
                         SocialMediaIcon(
                           // E-mail
                           iconPath: 'assets/icone_email.png',
-                          url: 'mailto:example@example.com',
+                          url: 'mailto:infinitysky311@gmail.com',
                         ),
                       ],
                     ),
