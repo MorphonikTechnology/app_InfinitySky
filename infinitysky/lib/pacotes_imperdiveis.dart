@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:infinitysky/melhores_destinos.dart';
-import 'package:infinitysky/pacotes_favoritados.dart';
 import 'package:infinitysky/sobre_nos.dart';
 
 void main() {
@@ -17,7 +16,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/Melhores Destinos': (context) => const MelhoresDestinos(),
         '/Pacotes Imperdíveis': (context) => const PacotesImperdiveis(),
-        '/Pacotes Favoritados': (context) => const PacotesFavoritados(),
         '/Sobre nós': (context) => const SobreNos(),
       },
     );
@@ -50,9 +48,6 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
         routeName = '/Pacotes Imperdíveis';
         break;
       case 2:
-        routeName = '/Pacotes Favoritados';
-        break;
-      case 3:
         routeName = '/Sobre nós';
         break;
       default:
@@ -153,14 +148,9 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
                   onPressed: () => _onItemTapped(1),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.bookmark, size: 50),
+                  icon: const Icon(Icons.group, size: 50),
                   color: _selectedIndex == 2 ? Colors.white : Colors.grey,
                   onPressed: () => _onItemTapped(2),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.group, size: 50),
-                  color: _selectedIndex == 3 ? Colors.white : Colors.grey,
-                  onPressed: () => _onItemTapped(3),
                 ),
               ],
             ),
@@ -211,13 +201,13 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   String getPricePerPerson(int index) {
     switch (index) {
       case 0:
-        return '12x R\$ 907';
+        return '12x R\$ 907,00';
       case 1:
-        return '12x R\$ 703';
+        return '12x R\$ 703,00';
       case 2:
-        return '12x R\$ 659';
+        return '12x R\$ 659,00';
       case 3:
-        return '12x R\$ 600';
+        return '12x R\$ 600,00';
       default:
         return '';
     }
@@ -254,7 +244,7 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   }
 }
 
-class TravelCard extends StatelessWidget {
+class TravelCard extends StatefulWidget {
   final String imagePath;
   final String cityName;
   final String pricePerPerson;
@@ -275,6 +265,14 @@ class TravelCard extends StatelessWidget {
   });
 
   @override
+  // ignore: library_private_types_in_public_api
+  _TravelCardState createState() => _TravelCardState();
+}
+
+class _TravelCardState extends State<TravelCard> {
+  bool isLiked = false; // Variável de controle para o estado do ícone
+
+  @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 3,
@@ -291,7 +289,7 @@ class TravelCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              imagePath,
+              widget.imagePath,
               height: 100,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -302,9 +300,9 @@ class TravelCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '$cityName – 7 Diárias',
+                    '${widget.cityName} – 7 Diárias',
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF003C5F),
                     ),
@@ -317,25 +315,25 @@ class TravelCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  if (hostFamily)
+                  if (widget.hostFamily)
                     const Text(
                       'Hospedagem - Host Family',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
                   Text(
-                    'Check-in: $checkInDate',
+                    'Check-in: ${widget.checkInDate}',
                     style: const TextStyle(
-                      fontSize: 12,
+                      fontSize: 13,
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 30), // Espaço adicionado entre os textos
                   const Text(
                     'a partir de',
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 13),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -344,15 +342,15 @@ class TravelCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            pricePerPerson,
+                            widget.pricePerPerson,
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Color(0xFF003C5F),
                             ),
                           ),
                           Text(
-                            cityName == 'Nova York'
+                            widget.cityName == 'Nova York'
                                 ? 'PREÇO PARA 2 PESSOAS'
                                 : 'PREÇO PARA 1 PESSOA',
                             style: const TextStyle(fontSize: 10),
@@ -360,33 +358,22 @@ class TravelCard extends StatelessWidget {
                         ],
                       ),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.center, // Centraliza os widgets na coluna
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          // Adicionamento do ícone de curtida, onde o usuário pode curtir e quando fizer essa ação vai ficar vermelho, mostrando que ele curtiu, ou seja, tem interesse por um determinado plano(s).
                           IconButton(
-                            icon: const Icon(Icons.bookmark_outline, color: Color.fromARGB(255, 73, 7, 255)),
+                            icon: Icon(
+                              isLiked ? Icons.favorite : Icons.favorite_border, // Alterna entre os ícones
+                              color: isLiked ? Colors.red : Colors.grey, // Alterna entre as cores
+                            ),
+                            iconSize: 30, // Ajusta o tamanho do ícone
                             padding: EdgeInsets.zero,
                             constraints: const BoxConstraints(),
                             onPressed: () {
-                              // Lógica para adicionar à lista de favoritos
+                              setState(() {
+                                isLiked = !isLiked; // Altera o estado ao clicar
+                              });
                             },
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: SizedBox(
-                              width: 80, // Ajuste a largura conforme necessário
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFF003B5C),
-                                  foregroundColor: Colors.white,
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(0),
-                                  ),
-                                ),
-                                child: const Text('CONFIRA', style: TextStyle(fontSize: 12)),
-                              ),
-                            ),
                           ),
                         ],
                       ),
@@ -394,7 +381,7 @@ class TravelCard extends StatelessWidget {
                   ),
                   const Divider(),
                   Text(
-                    '                                                        Total para $totalPeople: $totalPrice',
+                    'Total para ${widget.totalPeople}: ${widget.totalPrice}',
                     style: const TextStyle(fontSize: 12),
                   ),
                 ],

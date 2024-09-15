@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:infinitysky/pacotes_imperdiveis.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'melhores_destinos.dart';
-import 'pacotes_favoritados.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/Melhores Destinos': (context) => const MelhoresDestinos(),
         '/Pacotes Imperdíveis': (context) => const PacotesImperdiveis(),
-        '/Pacotes Favoritados': (context) => const PacotesFavoritados(),
         '/Sobre nós': (context) => const SobreNos(),
       },
     );
@@ -53,9 +51,6 @@ class _SobreNosState extends State<SobreNos> {
         routeName = '/Pacotes Imperdíveis';
         break;
       case 2:
-        routeName = '/Pacotes Favoritados';
-        break;
-      case 3:
         routeName = '/Sobre nós';
         break;
       default:
@@ -268,7 +263,7 @@ class _SobreNosState extends State<SobreNos> {
                           // Caminho para o ícone da rede social.
                           // Instagram
                           iconPath: 'assets/icone_insta.png',
-                          url: 'https://www.instagram.com/yourprofile',
+                          url: 'https://www.instagram.com/infin.itysky?igsh=MW15YWtxczlrbGlxeg==',
                         ),
                         SizedBox(width: 16),
                         SocialMediaIcon(
@@ -329,14 +324,9 @@ class _SobreNosState extends State<SobreNos> {
                   onPressed: () => _onItemTapped(1),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.bookmark, size: 50),
+                  icon: const Icon(Icons.group, size: 50),
                   color: _selectedIndex == 2 ? Colors.white : Colors.grey,
                   onPressed: () => _onItemTapped(2),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.group, size: 50),
-                  color: _selectedIndex == 3 ? Colors.white : Colors.grey,
-                  onPressed: () => _onItemTapped(3),
                 ),
               ],
             ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:infinitysky/cursos.dart';
 import 'package:infinitysky/escolas.dart';
-import 'package:infinitysky/pacotes_favoritados.dart';
 import 'package:infinitysky/pacotes_imperdiveis.dart';
 import 'package:infinitysky/sobre_nos.dart';
 import 'package:infinitysky/tela_intro.dart';
@@ -31,7 +30,6 @@ class MyApp extends StatelessWidget {
         '/': (context) => const TelaIntro(),
         '/Melhores Destinos': (context) => const MelhoresDestinos(),
         '/Pacotes Imperdíveis': (context) => const PacotesImperdiveis(),
-        '/Pacotes Favoritados': (context) => const PacotesFavoritados(),
         '/Sobre nós': (context) => const SobreNos(),
         '/cursos': (context) => const Cursos(),
         '/escolas': (context) => const Escolas(),
@@ -66,9 +64,6 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
         routeName = '/Pacotes Imperdíveis';
         break;
       case 2:
-        routeName = '/Pacotes Favoritados';
-        break;
-      case 3:
         routeName = '/Sobre nós';
         break;
       default:
@@ -515,14 +510,9 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                   onPressed: () => _onItemTapped(1),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.bookmark, size: 50),
+                  icon: const Icon(Icons.group, size: 50),
                   color: _selectedIndex == 2 ? Colors.white : Colors.grey,
                   onPressed: () => _onItemTapped(2),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.group, size: 50),
-                  color: _selectedIndex == 3 ? Colors.white : Colors.grey,
-                  onPressed: () => _onItemTapped(3),
                 ),
               ],
             ),
