@@ -6,8 +6,8 @@ class TelaIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Após 3 segundos, automaticamente navega para a tela dos Melhores Destinos
-    Future.delayed(const Duration(seconds: 3), () {
+    // Após 6 segundos, automaticamente navega para a tela dos Melhores Destinos
+    Future.delayed(const Duration(seconds: 6), () {
       Navigator.pushReplacementNamed(context, '/Melhores Destinos');
     });
 
@@ -15,7 +15,11 @@ class TelaIntro extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         // Imagem/GIF que será mostrada na tela
-        child: Image.asset('assets/logo_inicio.png'),
+        child: SizedBox(
+          width: 350,
+          height: 350,
+          child: Image.asset('assets/logo_inicio.gif'),
+        ),
       ),
     );
   }
