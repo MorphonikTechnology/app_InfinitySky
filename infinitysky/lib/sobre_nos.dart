@@ -275,7 +275,7 @@ class _SobreNosState extends State<SobreNos> {
                         SocialMediaIcon(
                           // Linkedlin
                           iconPath: 'assets/icone_linkedlin.png',
-                          url: 'https://www.linkedin.com/in/yourprofile',
+                          url: 'https://www.linkedin.com/company/infinitysky/',
                         ),
                         SizedBox(width: 16),
                         SocialMediaIcon(
