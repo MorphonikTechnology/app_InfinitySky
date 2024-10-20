@@ -390,7 +390,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/holanda.jpg',
+                      'assets/portugal.jpg',
                       fit: BoxFit.cover,
                       width: 370,
                       height: 150,
@@ -403,7 +403,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Holanda',
+                          'Portugal',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -422,7 +422,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/africa_sul.jpg',
+                      'assets/estadosunidos.jpg',
                       fit: BoxFit.cover,
                       width: 370,
                       height: 150,
@@ -435,7 +435,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'África do Sul',
+                          'Estados Unidos',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -467,7 +467,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Reino Unido',
+                          'Inglaterra',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,

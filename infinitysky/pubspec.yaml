@@ -45,9 +45,9 @@ flutter:
     - assets/australia.jpg
     - assets/canada.jpg
     - assets/argentina.jpg
-    - assets/holanda.jpg
-    - assets/africa_sul.jpg
     - assets/reino_unido.jpg
+    - assets/estadosunidos.jpg
+    - assets/portugal.jpg
     - assets/icone_app.png
     - assets/logo_inicio.gif
     - assets/idioma1.jpg
@@ -56,12 +56,17 @@ flutter:
     - assets/idioma4.jpg
     - assets/ingles.jpg
     - assets/espanhol.jpg
-    - assets/holandes.jpg
+    - assets/portugues.jpg
     - assets/escola1.jpg
     - assets/escola2.jpg
     - assets/escola3.jpg
     - assets/escola4.jpeg
-    - assets/amsterdam.jpg
+    - assets/lusa.jpg
     - assets/barton.jpg
     - assets/british.jpeg
     - assets/expanish.jpg
+    - assets/planoinglaterra1.png
+    - assets/planoportugal1.png
+    - assets/planocanada1.png
+    - assets/planoargentina1.png
+    - assets/planoaustralia1.png

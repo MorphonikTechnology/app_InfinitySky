@@ -400,7 +400,7 @@ class ImageCarouselSlider extends StatelessWidget {
             child: Stack(
               children: [
                 Image.asset(
-                  'assets/amsterdam.jpg',
+                  'assets/lusa.jpg',
                   fit: BoxFit.cover,
                   width: 370,
                   height: 150,
@@ -413,7 +413,7 @@ class ImageCarouselSlider extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     color: Colors.black45,
                     child: const Text(
-                      'University of Amsterdam',
+                      'Lusa Language School',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,

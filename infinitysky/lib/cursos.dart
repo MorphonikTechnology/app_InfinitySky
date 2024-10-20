@@ -342,7 +342,7 @@ class _CursosState extends State<Cursos> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'assets/holandes.jpg',
+                      'assets/portugues.jpg',
                       fit: BoxFit.cover,
                       width: 370,
                       height: 150,
@@ -355,7 +355,7 @@ class _CursosState extends State<Cursos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Holandês',
+                          'Português',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,

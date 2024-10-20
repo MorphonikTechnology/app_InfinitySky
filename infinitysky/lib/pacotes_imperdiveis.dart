@@ -109,7 +109,7 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
             mainAxisSpacing: 4.0, // Espaçamento vertical entre as linhas
             childAspectRatio: 0.65, // Proporção entre largura e altura
           ),
-          itemCount: 4, // Número total de cartões
+          itemCount: 6, // Número total de cartões
           itemBuilder: (context, index) {
             return TravelCard(
               imagePath: getImagePath(index),
@@ -117,8 +117,13 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
               pricePerPerson: getPricePerPerson(index),
               totalPrice: getTotalPrice(index),
               checkInDate: '26/07/2024',
-              totalPeople: getTotalPeople(index),
-              hostFamily: true,
+              totalPeople: '1 pessoa',
+              hospedagem: getHospedagem(index),
+              saindo: 'Saindo de São Paulo',
+              partir: 'a partir de',
+              nomehospe: 'Hospedagem',
+              checkin: 'Check-in:',
+              totalpara: 'Total para',
             );
           },
         ),
@@ -173,11 +178,15 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
       case 0:
         return 'assets/nova_york.png';
       case 1:
-        return 'assets/londres.png';
+        return 'assets/planoinglaterra1.png';
       case 2:
-        return 'assets/portugal.png';
+        return 'assets/planoportugal1.png';
       case 3:
-        return 'assets/toronto.png';
+        return 'assets/planocanada1.png';
+      case 4:
+        return 'assets/planoargentina1.png';
+      case 5:
+        return 'assets/planoaustralia1.png';
       default:
         return '';
     }
@@ -186,13 +195,17 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   String getCityName(int index) {
     switch (index) {
       case 0:
-        return 'Nova York';
+        return 'Nova York – 6 meses';
       case 1:
-        return 'Londres';
+        return 'Londres – 6 meses';
       case 2:
-        return 'Portugal';
+        return 'Lisboa – 1 ano';
       case 3:
-        return 'Toronto';
+        return 'Toronto – 4 meses';
+      case 4:
+        return 'Buenos Aires – 6 meses';
+      case 5:
+        return 'Sydney – 6 Meses';
       default:
         return '';
     }
@@ -201,13 +214,17 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   String getPricePerPerson(int index) {
     switch (index) {
       case 0:
-        return '12x R\$ 907,00';
+        return '12x R\$ 1.500,00';
       case 1:
-        return '12x R\$ 703,00';
+        return '12x R\$ 1.500,00';
       case 2:
-        return '12x R\$ 659,00';
+        return '12x R\$ 1.666,67';
       case 3:
-        return '12x R\$ 600,00';
+        return '12x R\$ 1.250,00';
+      case 4:
+        return '12x R\$ 833,33';
+      case 5:
+        return '12x R\$ 1.166,67';
       default:
         return '';
     }
@@ -216,28 +233,36 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   String getTotalPrice(int index) {
     switch (index) {
       case 0:
-        return 'R\$ 10.892,00';
+        return 'R\$ 18.000,00';
       case 1:
-        return 'R\$ 8.436,00';
+        return 'R\$ 18.000,00';
       case 2:
-        return 'R\$ 7.908,00';
+        return 'R\$ 20,000,00';
       case 3:
-        return 'R\$ 7.200,00';
+        return 'R\$ 15.000,00';
+      case 4:
+        return 'R\$ 10.000,00';
+      case 5:
+        return 'R\$ 14.000,00';
       default:
         return '';
     }
   }
 
-  String getTotalPeople(int index) {
+  String getHospedagem(int index) {
     switch (index) {
       case 0:
-        return '2 pessoas';
+        return 'Residência Estudantil';
       case 1:
-        return '1 pessoa';
+        return 'Acomodação Homestay';
       case 2:
-        return '2 pessoas';
+        return 'Acomodação Homestay';
       case 3:
-        return '1 pessoa';
+        return 'Residência Estudantil';
+      case 4:
+        return 'Acomodação Homestay';
+      case 5:
+        return 'Acomodação Homestay';
       default:
         return '';
     }
@@ -251,7 +276,12 @@ class TravelCard extends StatefulWidget {
   final String totalPrice;
   final String checkInDate;
   final String totalPeople;
-  final bool hostFamily;
+  final String hospedagem;
+  final String saindo;
+  final String partir;
+  final String nomehospe;
+  final String checkin;
+  final String totalpara;
 
   const TravelCard({
     super.key,
@@ -261,7 +291,12 @@ class TravelCard extends StatefulWidget {
     required this.totalPrice,
     required this.checkInDate,
     required this.totalPeople,
-    required this.hostFamily,
+    required this.hospedagem,
+    required this.saindo,
+    required this.partir,
+    required this.nomehospe,
+    required this.checkin,
+    required this.totalpara
   });
 
   @override
@@ -300,40 +335,39 @@ class _TravelCardState extends State<TravelCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${widget.cityName} – 7 Diárias',
+                    '${widget.cityName} ',
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 17,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF003C5F),
                     ),
                   ),
                   const SizedBox(height: 2),
-                  const Text(
-                    'Saindo de São Paulo',
-                    style: TextStyle(
-                      fontSize: 14,
+                  Text(
+                    '${widget.saindo} ',
+                    style: const TextStyle(
+                      fontSize: 13,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  if (widget.hostFamily)
-                    const Text(
-                      'Hospedagem - Host Family',
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
                   Text(
-                    'Check-in: ${widget.checkInDate}',
+                    '${widget.nomehospe} – ${widget.hospedagem}',
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  Text(
+                    '${widget.checkin} ${widget.checkInDate}',
                     style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
                     ),
                   ),
                   const SizedBox(height: 30), // Espaço adicionado entre os textos
-                  const Text(
-                    'a partir de',
-                    style: TextStyle(fontSize: 13),
+                  Text(
+                    '${widget.partir} ',
+                    style: const TextStyle(fontSize: 13),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -348,12 +382,6 @@ class _TravelCardState extends State<TravelCard> {
                               fontWeight: FontWeight.bold,
                               color: Color(0xFF003C5F),
                             ),
-                          ),
-                          Text(
-                            widget.cityName == 'Nova York'
-                                ? 'PREÇO PARA 2 PESSOAS'
-                                : 'PREÇO PARA 1 PESSOA',
-                            style: const TextStyle(fontSize: 10),
                           ),
                         ],
                       ),
@@ -381,7 +409,7 @@ class _TravelCardState extends State<TravelCard> {
                   ),
                   const Divider(),
                   Text(
-                    'Total para ${widget.totalPeople}: ${widget.totalPrice}',
+                    '${widget.totalpara} ${widget.totalPeople}: ${widget.totalPrice}',
                     style: const TextStyle(fontSize: 12),
                   ),
                 ],
