@@ -325,7 +325,7 @@ class _SobreNosState extends State<SobreNos> {
                 ),
                 IconButton(
                   icon: const Icon(Icons.group, size: 50),
-                  color: _selectedIndex == 2 ? Colors.white : Colors.grey,
+                  color: _selectedIndex == 2 ? Colors.white : Colors.white,
                   onPressed: () => _onItemTapped(2),
                 ),
               ],
