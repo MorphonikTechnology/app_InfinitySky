@@ -42,6 +42,23 @@ class Escolas extends StatefulWidget {
   _EscolasState createState() => _EscolasState();
 }
 
+class TelaEscolas {
+  static const String escolas = 'Escolas ';
+  static const String parceiras = 'Parceiras';
+  static const String menu = 'Menu';
+  static const String saiba = 'Saiba';
+  static const String mais = ' Mais';
+  static const String paises = 'Países';
+  static const String cursos = 'Cursos';
+  static const String escolas2 = 'Escolas';
+  static const String conhecer = 'Conheça nossas escolas';
+  static const String base = 'A base do sucesso começa aqui!';
+  static const String barton = 'Barton International College';
+  static const String expanish = 'Expanish';
+  static const String lusa = 'Lusa Language School';
+  static const String british = 'British Study Centres';
+}
+
 class _EscolasState extends State<Escolas> {
   int _selectedIndex = 0;
 
@@ -86,11 +103,11 @@ class _EscolasState extends State<Escolas> {
                   children: [
                     // Título principal desta tela.
                     TextSpan(
-                      text: 'Escolas ',
+                      text: TelaEscolas.escolas,
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
                     ),
                     TextSpan(
-                      text: 'Parceiras',
+                      text: TelaEscolas.parceiras,
                       style: TextStyle(color: Color(0xFF0F79BA), fontWeight: FontWeight.w700),
                     ),
                   ],
@@ -128,7 +145,7 @@ class _EscolasState extends State<Escolas> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Menu',
+                        TelaEscolas.menu,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,
@@ -139,7 +156,7 @@ class _EscolasState extends State<Escolas> {
                       Row(
                         children: [
                           Text(
-                            'Saiba',
+                            TelaEscolas.saiba,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 23,
@@ -147,7 +164,7 @@ class _EscolasState extends State<Escolas> {
                             ),
                           ),
                           Text(
-                            ' Mais',
+                            TelaEscolas.mais,
                             style: TextStyle(
                               color: Color(0xFF0F79BA),
                               fontSize: 23,
@@ -163,7 +180,7 @@ class _EscolasState extends State<Escolas> {
               ListTile(
                 leading: const Icon(Icons.public, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Países',
+                  TelaEscolas.paises,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
@@ -173,7 +190,7 @@ class _EscolasState extends State<Escolas> {
               ListTile(
                 leading: const Icon(Icons.school, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Cursos',
+                  TelaEscolas.cursos,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
@@ -183,7 +200,7 @@ class _EscolasState extends State<Escolas> {
               ListTile(
                 leading: const Icon(Icons.business, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Escolas',
+                  TelaEscolas.escolas2,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 onTap: () {
@@ -307,7 +324,7 @@ class ImageCarouselSlider extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Conheça nossas escolas',
+                          TelaEscolas.conhecer,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 23,
@@ -315,7 +332,7 @@ class ImageCarouselSlider extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'A base do sucesso começa aqui!',
+                          TelaEscolas.base,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
@@ -349,7 +366,7 @@ class ImageCarouselSlider extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     color: Colors.black45,
                     child: const Text(
-                      'Barton International College',
+                      TelaEscolas.barton,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
@@ -381,7 +398,7 @@ class ImageCarouselSlider extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     color: Colors.black45,
                     child: const Text(
-                      'Expanish',
+                      TelaEscolas.expanish,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
@@ -413,7 +430,7 @@ class ImageCarouselSlider extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     color: Colors.black45,
                     child: const Text(
-                      'Lusa Language School',
+                      TelaEscolas.lusa,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
@@ -445,7 +462,7 @@ class ImageCarouselSlider extends StatelessWidget {
                     padding: const EdgeInsets.all(10.0),
                     color: Colors.black45,
                     child: const Text(
-                      'British Study Centres',
+                      TelaEscolas.british,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,

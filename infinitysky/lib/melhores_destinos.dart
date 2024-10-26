@@ -46,6 +46,19 @@ class MelhoresDestinos extends StatefulWidget {
   _MelhoresDestinosState createState() => _MelhoresDestinosState();
 }
 
+class Destinos {
+  static const String destinos = 'Destinos';
+  static const String mais = ' Mais';
+  static const String fora = 'Estude Fora!';
+  static const String conectar2 = 'Conecte-se ao mundo através da educação!';
+  static const String canada = 'Canadá';
+  static const String australia = 'Austrália';
+  static const String argentina = 'Argentina';
+  static const String portugal = 'Portugal';
+  static const String eua = 'Estados Unidos';
+  static const String inglaterra = 'Inglaterra';
+}
+
 class _MelhoresDestinosState extends State<MelhoresDestinos> {
   int _selectedIndex = 0;
 
@@ -97,11 +110,11 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Melhores ',
+                      text: AppStrings.appBarTitleMain,
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
                     ),
                     TextSpan(
-                      text: 'Destinos',
+                      text: Destinos.destinos,
                       style: TextStyle(color: Color(0xFF0F79BA), fontWeight: FontWeight.w700),
                     ),
                   ],
@@ -139,7 +152,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Menu',
+                        TelaEscolas.menu,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,
@@ -150,7 +163,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                       Row(
                         children: [
                           Text(
-                            'Saiba',
+                            TelaEscolas.saiba,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 23,
@@ -158,7 +171,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                             ),
                           ),
                           Text(
-                            ' Mais',
+                            Destinos.mais,
                             style: TextStyle(
                               color: Color(0xFF0F79BA),
                               fontSize: 23,
@@ -175,7 +188,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
               ListTile(
                 leading: const Icon(Icons.public, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Países',
+                  TelaEscolas.paises,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
                 ),
                 onTap: () {
@@ -185,7 +198,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
               ListTile(
                 leading: const Icon(Icons.school, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Cursos',
+                  TelaEscolas.cursos,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
                 ),
                 onTap: () {
@@ -195,7 +208,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
               ListTile(
                 leading: const Icon(Icons.business, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Escolas',
+                  TelaEscolas.escolas2,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
                 ),
                 onTap: () {
@@ -264,7 +277,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Estude Fora!',
+                              Destinos.fora,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 23,
@@ -272,7 +285,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                               ),
                             ),
                             Text(
-                              'Conecte-se ao mundo através da educação!',
+                              Destinos.conectar2,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -307,7 +320,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Canadá',
+                          Destinos.canada,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -339,7 +352,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Austrália',
+                          Destinos.australia,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -371,7 +384,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Argentina',
+                          Destinos.argentina,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -403,7 +416,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Portugal',
+                          Destinos.portugal,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -435,7 +448,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Estados Unidos',
+                          Destinos.eua,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -467,7 +480,7 @@ class _MelhoresDestinosState extends State<MelhoresDestinos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Inglaterra',
+                          Destinos.inglaterra,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,

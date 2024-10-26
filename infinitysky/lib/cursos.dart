@@ -42,6 +42,16 @@ class Cursos extends StatefulWidget {
   _CursosState createState() => _CursosState();
 }
 
+class AppStrings {
+  static const String appBarTitleMain = 'Melhores ';
+  static const String appBarIngles = 'Inglês';
+  static const String appBarEspanhol = 'Espanhol';
+  static const String appBarPortugues = 'Português';
+  static const String drawerOptionEscolas = 'Escolas';
+  static const String imageTitleCursos = 'Cursos de idiomas';
+  static const String imageSubtitleCursos = 'Exclusivos para cada localidade!';
+}
+
 class _CursosState extends State<Cursos> {
   int _selectedIndex = 0;
 
@@ -93,11 +103,11 @@ class _CursosState extends State<Cursos> {
                   children: [
                     // Título principal desta tela.
                     TextSpan(
-                      text: 'Melhores ',
+                      text: AppStrings.appBarTitleMain,
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
                     ),
                     TextSpan(
-                      text: 'Cursos',
+                      text: TelaEscolas.cursos,
                       style: TextStyle(color: Color(0xFF0F79BA), fontWeight: FontWeight.w700),
                     ),
                   ],
@@ -135,7 +145,7 @@ class _CursosState extends State<Cursos> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Menu',
+                        TelaEscolas.menu,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 24,
@@ -146,7 +156,7 @@ class _CursosState extends State<Cursos> {
                       Row(
                         children: [
                           Text(
-                            'Saiba',
+                            TelaEscolas.saiba,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 23,
@@ -154,7 +164,7 @@ class _CursosState extends State<Cursos> {
                             ),
                           ),
                           Text(
-                            ' Mais',
+                            Destinos.mais,
                             style: TextStyle(
                               color: Color(0xFF0F79BA),
                               fontSize: 23,
@@ -170,7 +180,7 @@ class _CursosState extends State<Cursos> {
               ListTile(
                 leading: const Icon(Icons.public, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Países',
+                  TelaEscolas.paises,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
                 ),
                 onTap: () {
@@ -180,7 +190,7 @@ class _CursosState extends State<Cursos> {
               ListTile(
                 leading: const Icon(Icons.school, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Cursos',
+                  TelaEscolas.cursos,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
                 ),
                 onTap: () {
@@ -190,7 +200,7 @@ class _CursosState extends State<Cursos> {
               ListTile(
                 leading: const Icon(Icons.business, color: Color(0xFF0F79BA)),
                 title: const Text(
-                  'Escolas',
+                  TelaEscolas.escolas2,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,),
                 ),
                 onTap: () {
@@ -249,7 +259,7 @@ class _CursosState extends State<Cursos> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Cursos de idiomas',
+                              AppStrings.imageTitleCursos,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 23,
@@ -257,7 +267,7 @@ class _CursosState extends State<Cursos> {
                               ),
                             ),
                             Text(
-                              'Exclusivos para cada localidade!',
+                              AppStrings.imageSubtitleCursos,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -291,7 +301,7 @@ class _CursosState extends State<Cursos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Inglês',
+                          AppStrings.appBarIngles,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -323,7 +333,7 @@ class _CursosState extends State<Cursos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Espanhol',
+                          AppStrings.appBarEspanhol,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -355,7 +365,7 @@ class _CursosState extends State<Cursos> {
                         padding: const EdgeInsets.all(10.0),
                         color: Colors.black45,
                         child: const Text(
-                          'Português',
+                          AppStrings.appBarPortugues,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -371,6 +381,9 @@ class _CursosState extends State<Cursos> {
           ],
         ),
       ),
+
+
+      
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           color: Color(0xFF003B5C),
