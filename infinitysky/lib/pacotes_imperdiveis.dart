@@ -116,13 +116,11 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
               cityName: getCityName(index),
               pricePerPerson: getPricePerPerson(index),
               totalPrice: getTotalPrice(index),
-              checkInDate: '26/07/2024',
               totalPeople: '1 pessoa',
               hospedagem: getHospedagem(index),
-              saindo: 'Saindo de São Paulo',
-              partir: 'a partir de',
-              nomehospe: 'Hospedagem',
-              checkin: 'Check-in:',
+              tipocurso:getTipoCurso(index),
+              nomeescola:getNomeEscola(index),
+              partir: 'em até',
               totalpara: 'Total para',
             );
           },
@@ -134,6 +132,8 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
           ),
         ),
         child: Column(
@@ -211,6 +211,44 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
     }
   }
 
+  String getTipoCurso(int index) {
+    switch (index) {
+      case 0:
+        return 'Curso: Inglês';
+      case 1:
+        return 'Curso: Inglês';
+      case 2:
+        return 'Curso: Português';
+      case 3:
+        return 'Curso: Inglês';
+      case 4:
+        return 'Curso: Espanhol';
+      case 5:
+        return 'Curso: Inglês';
+      default:
+        return '';
+    }
+  }
+
+  String getNomeEscola(int index) {
+    switch (index) {
+      case 0:
+        return 'Escola: Kaplan International NY';
+      case 1:
+        return 'Escola: The London School';
+      case 2:
+        return 'Escola: Lusa Language School';
+      case 3:
+        return 'Escola: EC Toronto';
+      case 4:
+        return 'Escola: Academia Buenos Aires';
+      case 5:
+        return 'Escola: Navitas English Sydney';
+      default:
+        return '';
+    }
+  }
+
   String getPricePerPerson(int index) {
     switch (index) {
       case 0:
@@ -252,17 +290,17 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   String getHospedagem(int index) {
     switch (index) {
       case 0:
-        return 'Residência Estudantil';
+        return 'Hospedagem – Residência Estudantil';
       case 1:
-        return 'Acomodação Homestay';
+        return 'Hospedagem – Acomodação Homestay';
       case 2:
-        return 'Acomodação Homestay';
+        return 'Hospedagem – Acomodação Homestay';
       case 3:
-        return 'Residência Estudantil';
+        return 'Hospedagem – Residência Estudantil';
       case 4:
-        return 'Acomodação Homestay';
+        return 'Hospedagem – Acomodação Homestay';
       case 5:
-        return 'Acomodação Homestay';
+        return 'Hospedagem – Acomodação Homestay';
       default:
         return '';
     }
@@ -274,13 +312,11 @@ class TravelCard extends StatefulWidget {
   final String cityName;
   final String pricePerPerson;
   final String totalPrice;
-  final String checkInDate;
+  final String nomeescola;
   final String totalPeople;
   final String hospedagem;
-  final String saindo;
+  final String tipocurso;
   final String partir;
-  final String nomehospe;
-  final String checkin;
   final String totalpara;
 
   const TravelCard({
@@ -289,13 +325,11 @@ class TravelCard extends StatefulWidget {
     required this.cityName,
     required this.pricePerPerson,
     required this.totalPrice,
-    required this.checkInDate,
+    required this.nomeescola,
     required this.totalPeople,
     required this.hospedagem,
-    required this.saindo,
+    required this.tipocurso,
     required this.partir,
-    required this.nomehospe,
-    required this.checkin,
     required this.totalpara
   });
 
@@ -344,21 +378,21 @@ class _TravelCardState extends State<TravelCard> {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    '${widget.saindo} ',
+                    '${widget.tipocurso} ',
                     style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    '${widget.nomehospe} – ${widget.hospedagem}',
+                    '${widget.hospedagem} ',
                     style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.normal,
                     ),
                   ),
                   Text(
-                    '${widget.checkin} ${widget.checkInDate}',
+                    '${widget.nomeescola} ',
                     style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.normal,

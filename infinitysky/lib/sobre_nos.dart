@@ -30,7 +30,7 @@ class TextosSobreNos {
   String get quemSomos => 'QUEM SOMOS?';
   String get descricaoEmpresa => 'Uma empresa que tem como objetivo proporcionar o melhor serviço de intercâmbio.';
   String get contatoTitulo => 'ENTRE EM CONTATO CONOSCO';
-  String get contatoDescricao => 'Ficamos localizados na Rua Butantã, 434 - Pinheiros.\nNosso contato: (11) 91234-5678.\nNosso site: www.infinitysky.com';
+  String get contatoDescricao => 'Avenida Francisco Matarazzo, 404 – Água Branca, SP.\nNosso contato: (11) 91234-5678.\nNosso site: www.infinitysky.com';
 
   List<String> get listaMotivos => [
         '1º Viagens seguras',
