@@ -30,6 +30,11 @@ class PacotesImperdiveis extends StatefulWidget {
   _PacotesImperdiveisState createState() => _PacotesImperdiveisState();
 }
 
+class Pacotes {
+  static const String pacotes = 'Pacotes ';
+  static const String impediveis = 'Imperdíveis';
+}
+
 class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
   int _selectedIndex = 1;
 
@@ -74,11 +79,11 @@ class _PacotesImperdiveisState extends State<PacotesImperdiveis> {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Pacotes ',
+                      text: Pacotes.pacotes,
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
                     ),
                     TextSpan(
-                      text: 'Imperdíveis',
+                      text: Pacotes.impediveis,
                       style: TextStyle(color: Color(0xFF0F79BA), fontWeight: FontWeight.w700),
                     ),
                   ],
