@@ -12,3 +12,7 @@ com interface limpa, permitindo uma navegação intuitiva e agradável para os u
 
 <p align="justify"> E a quarta tela mostra todas as informações da empresa, contando com os contatos, redes sociais, além de descrever todos os serviços que a mesma fornece
 </p>
+
+## Funcionamento do aplicativo:
+
+LINK DO VÍDEO: https://drive.google.com/file/d/1cLe7_ZATAuCyBS7q9l3zNbdiwKF0JWSt/view?usp=sharing
