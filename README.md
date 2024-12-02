@@ -2,7 +2,7 @@
 <p align="justify"> O aplicativo do e-commerce da empresa InfinitySky é um catálogo, no qual tem como finalidade mostrar os serviços que a empresa oferece. Ele apresenta de forma simples, 
 com interface limpa, permitindo uma navegação intuitiva e agradável para os usuários. O objetivo é facilitar o acesso às informações, proporcionando uma experiência otimizada e eficiente. </p>
 
-## Membros
+# Membros
 > Eloá Vasconcelos de Macedo
 > 
 > José Vinicius Valmoleda Laranjeira de Araújo
