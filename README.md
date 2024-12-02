@@ -2,18 +2,21 @@
 <p align="justify"> O aplicativo do e-commerce da empresa InfinitySky é um catálogo, no qual tem como finalidade mostrar os serviços que a empresa oferece. Ele apresenta de forma simples, 
 com interface limpa, permitindo uma navegação intuitiva e agradável para os usuários. O objetivo é facilitar o acesso às informações, proporcionando uma experiência otimizada e eficiente. </p>
 
-## Membros
-> Eloá Vasconcelos de Macedo
-> 
-> José Vinicius Valmoleda Laranjeira de Araújo
-> 
-> Laura Cristine Silva
-> 
-> Livia Rodrigues Cremonez
-> 
-> Marina Oliveira da Silva
-> 
-> Paulo Ricardo Matiasso Cruz
+## Membros da equipe: 
+– Eloá Vasconcelos de Macedo
+<br>
+– José Vinicius Valmoleda Laranjeira de Araújo
+<br>
+– Laura Cristine Silva
+<br>
+– Livia Rodrigues Cremonez
+<br>
+– Marina Oliveira da Silva
+<br>
+– Paulo Ricardo Matiasso Cruz
+<br>
+<br>
+**3° M-TEC PI DS (GRUPO 6)**
 
 ## Detalhamento das telas do aplicativo:
 <p align="justify"> A primeira tela é a apresentação inicial do aplicativo, em que mostra apenas a logo da InfinitySky, porém no formato GIF, sendo uma forma mais animada de iniciar a navegação, usando a função Splash Screen.</p>
@@ -25,6 +28,10 @@ com interface limpa, permitindo uma navegação intuitiva e agradável para os u
 <p align="justify"> E a quarta tela mostra todas as informações da empresa, contando com os contatos, redes sociais, além de descrever todos os serviços que a mesma fornece
 </p>
 
-## Funcionamento do aplicativo:
+## Tópicos a seguir:
+➜ [Protótipo do aplicativo](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Prot%C3%B3tipo-do-aplicativo)<br>
+➜ [Visão ampla de cada tela do aplicativo (widgets)](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Vis%C3%A3o-ampla-de-cada-tela-do-aplicativo)<br>
+➜ [Sites de apoio para o desenvolvimento do aplicativo](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Sites-de-apoio-para-o-desenvolvimento-do-aplicativo)<br>
 
+## Funcionamento do aplicativo:
 LINK DO VÍDEO: https://drive.google.com/file/d/1cLe7_ZATAuCyBS7q9l3zNbdiwKF0JWSt/view?usp=sharing
