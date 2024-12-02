@@ -2,6 +2,18 @@
 <p align="justify"> O aplicativo do e-commerce da empresa InfinitySky é um catálogo, no qual tem como finalidade mostrar os serviços que a empresa oferece. Ele apresenta de forma simples, 
 com interface limpa, permitindo uma navegação intuitiva e agradável para os usuários. O objetivo é facilitar o acesso às informações, proporcionando uma experiência otimizada e eficiente. </p>
 
+## Membros
+> Eloá Vasconcelos de Macedo
+> 
+> José Vinicius Valmoleda Laranjeira de Araújo
+> 
+> Laura Cristine Silva
+> 
+> Livia Rodrigues Cremonez
+> 
+> Marina Oliveira da Silva
+> 
+> Paulo Ricardo Matiasso Cruz
 
 ## Detalhamento das telas do aplicativo:
 <p align="justify"> A primeira tela é a apresentação inicial do aplicativo, em que mostra apenas a logo da InfinitySky, porém no formato GIF, sendo uma forma mais animada de iniciar a navegação, usando a função Splash Screen.</p>
