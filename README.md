@@ -32,7 +32,7 @@ com interface limpa, permitindo uma navegação intuitiva e agradável para os u
 ➜ [Protótipo do aplicativo](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Prot%C3%B3tipo-do-aplicativo)<br>
 ➜ [Visão ampla de cada tela do aplicativo (widgets)](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Vis%C3%A3o-ampla-de-cada-tela-do-aplicativo)<br>
 ➜ [Sites de apoio para o desenvolvimento do aplicativo](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Sites-de-apoio-para-o-desenvolvimento-do-aplicativo)<br>
-➜ [Funcionamento do Aplicativo](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Funcionamento-do-aplicativo))<br>
+➜ [Funcionamento do Aplicativo](https://github.com/MorphonikTechnology/app_InfinitySky/wiki/Funcionamento-do-aplicativo)<br>
 
 ## Funcionamento do aplicativo:
 LINK DO VÍDEO: https://drive.google.com/file/d/1cLe7_ZATAuCyBS7q9l3zNbdiwKF0JWSt/view?usp=sharing
